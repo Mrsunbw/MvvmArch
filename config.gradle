@@ -1,0 +1,158 @@
+//android support
+def SupportVer = "28.0.0"
+//view
+def SwipeMenuVer = "1.3.0"
+def RefreshLayoutVer = "1.1.8@aar"
+def FlowLayoutVer = "1.1.2"
+def ScrollAblePanelVer = "1.2.0"
+//view注入
+def ButterKnifeVer = "10.1.0"
+def ButterKnifeCompilerVer = "10.1.0"
+//条码、二维码扫描
+def QrcodeCoreVer = "1.1.8@aar"
+def QrzbarVer = "1.1.8@aar"
+//xUtils框架
+def XutilsVer = "3.5.0"
+//事件总线
+def EventbusVer = "3.1.1"
+//本地日志
+def LoggerVer = "1.11"
+//http请求
+def OkgoVer = "3.0.4"
+def OkhttputilsVer = "2.6.2"
+def Retrofit2Ver = "2.3.0"
+def Retrofit2ConvVer = "2.3.0"
+//本地缓存
+def HawkVer = "1.23"
+def GrowingioVer = "1.1.8@aar"
+//物美
+def WmVer = "2.1.7@aar"
+def WmcommonVer = "1.3.9-SNAPSHOT@aar"
+def WmcalelibVer = "1.1.0@aar"
+def WmpickerviewVer = "1.0.2@aar"
+def WmimagepickerVer = "1.0.1"
+//友盟
+def AnalyticsVer = "8.0.0"
+def AnalyticsCommonVer = "2.0.0"
+//极光推送
+def JpushVer = "3.1.6"
+def JcoreVer = "1.2.5"
+//test
+def JunitVer = "4.12"
+def RunnerVer = "1.0.2"
+def EspressoVer = "3.0.2"
+//json解析
+def GsonVer = "2.8.2"
+def FastJsonVer = "1.1.68.android"
+//内存泄漏
+def LeakcanaryVer = "1.5.4"
+def LeakcanaryNoOpVer = "1.5.4"
+def BlockcanaryVer = "1.5.0"
+def BlockcanaryNoOpVer = "1.5.0"
+//android自定义字体库
+def CalligraphyVer = "1.2.0"
+//silencedut
+def SilencedutRouterVer = "1.3.0"
+def SilencedutRouterCompilerVer = "1.0.1"
+def SilencedutHubVer = "2.3.5"
+def SilencedutHubCompilerVer = "2.3.5"
+//viewmodel and livedata
+def LifecycleVer = "1.1.0"
+//room
+def RoomVer = "1.0.0"
+def RoomCompilerVer = "1.0.0"
+
+project.ext {
+    android = [
+            "applicationId"            : "com.max.mvvmarch",
+            "compileSdkVersion"        : 28,
+            "minSdkVersion"            : 16,
+            "targetSdkVersion"         : 28,
+            "appVersionCode"           : 1,
+            "appVersionName"           : "1.0",
+            "coreVersionCode"          : 1,
+            "coreVersionName"          : "1.0",
+            "baselibVersionCode"       : 1,
+            "baselibVersionName"       : "1.0",
+            "buildToolsVersion"        : "28.0.3",
+            "testInstrumentationRunner": "android.support.test.runner.AndroidJUnitRunner",
+    ]
+
+    signingConfig = [
+            "keyAlias"     : "wumart",
+            "keyPassword"  : "wumart20190225",
+            "storeFile"    : "../wumart.keystore",
+            "storePassword": "wumart20190225",
+    ]
+
+    dependencies = [
+            //android support
+            "appcompat-v7"              : "com.android.support:appcompat-v7:${SupportVer}",
+            "support-v4"                : "com.android.support:support-v4:${SupportVer}",
+            "design"                    : "com.android.support:design:${SupportVer}",
+            "cardview-v7"               : "com.android.support:cardview-v7:${SupportVer}",
+            "recyclerview-v7"           : "com.android.support:recyclerview-v7:${SupportVer}",
+            //view
+            "swipemenu-listview"        : "com.baoyz.swipemenulistview:library:${SwipeMenuVer}",
+            "bga-refreshlayout"         : "cn.bingoogolapple:bga-refreshlayout:${RefreshLayoutVer}",
+            "flowlayout"                : "com.hyman:flowlayout-lib:${FlowLayoutVer}",
+            "scrollablepanel"           : "com.kelin.scrollablepanel:library:${ScrollAblePanelVer}",
+            //view注入
+            "butterknife"               : "com.jakewharton:butterknife:${ButterKnifeVer}",
+            "butterknife-compiler"      : "com.jakewharton:butterknife-compiler:${ButterKnifeCompilerVer}",
+            //条码、二维码扫描
+            "bga-qrcodecore"            : "cn.bingoogolapple:bga-qrcodecore:${QrcodeCoreVer}",
+            "bga-zbar"                  : "cn.bingoogolapple:bga-zbar:${QrzbarVer}",
+            //xUtils框架
+            "xutils"                    : "org.xutils:xutils:${XutilsVer}",
+            //事件总线
+            "eventbus"                  : "org.greenrobot:eventbus:${EventbusVer}",
+            //本地日志
+            "logger"                    : "com.orhanobut:logger:${LoggerVer}",
+            //http请求
+            "okgo"                      : "com.lzy.net:okgo:${OkgoVer}",
+            "okhttputils"               : "com.zhy:okhttputils:${OkhttputilsVer}",
+            "retrofit2"                 : "com.squareup.retrofit2:retrofit:${Retrofit2Ver}",
+            "retrofit2-convert"         : "com.squareup.retrofit2:converter-gson:${Retrofit2ConvVer}",
+            //本地缓存
+            "hawk"                      : "com.github.orhanobut:hawk:${HawkVer}",
+            //埋点
+            "growingio"                 : "com.growingio.android:vds-android-agent:${GrowingioVer}",
+            //物美
+            "wumart-android"            : "com.wumart.lib:wumart-android:${WmVer}",
+            "wmcommon-android"          : "com.wumart.lib:wmcommon-android:${WmcommonVer}",
+            "wmcalelib-android"         : "com.wumart.lib:wmcalelib-android:${WmcalelibVer}",
+            "wumart-pickerview"         : "com.wumart.lib:pickerview-android:${WmpickerviewVer}",
+            "wumart-imagepicker"        : "com.github.wumart-android:imagepicker:${WmimagepickerVer}",
+            //友盟
+            "umeng-analytics"           : "com.umeng.umsdk:analytics:${AnalyticsVer}",
+            "umeng-common"              : "com.umeng.umsdk:common:${AnalyticsCommonVer}",
+            //极光推送
+            "jpush"                     : "cn.jiguang.sdk:jpush:${JpushVer}",
+            "jcore"                     : "cn.jiguang.sdk:jcore:${JcoreVer}",
+            //test
+            "junit"                     : "junit:junit:${JunitVer}",
+            "runner"                    : "com.android.support.test:runner:${RunnerVer}",
+            "espresso"                  : "com.android.support.test.espresso:espresso-core:${EspressoVer}",
+            //json解析
+            "gson"                      : "com.google.code.gson:gson:${GsonVer}",
+            "fastjson"                  : "com.alibaba:fastjson:${FastJsonVer}",
+            //内存泄漏
+            "leakcanary"                : "com.squareup.leakcanary:leakcanary-android:${LeakcanaryVer}",
+            "leakcanary-no-op"          : "com.squareup.leakcanary:leakcanary-android-no-op:${LeakcanaryNoOpVer}",
+            "blockcanary"               : "com.github.markzhai:blockcanary-android:${BlockcanaryVer}",
+            "blockcanary-no-op"         : "com.github.markzhai:blockcanary-no-op:${BlockcanaryNoOpVer}",
+            //android自定义字体库
+            "calligraphy"               : "uk.co.chrisjenx:calligraphy:${CalligraphyVer}",
+            //silencedut
+            "silencedut-router"         : "com.silencedut:router:${SilencedutRouterVer}",
+            "silencedut-router-compiler": "com.silencedut:router-compiler:${SilencedutRouterCompilerVer}",
+            "silencedut-hub"            : "com.github.silencedut.hub:hub:${SilencedutHubVer}",
+            "silencedut-hub-compiler"   : "com.github.silencedut.hub:hub-compiler:${SilencedutHubCompilerVer}",
+            //viewmodel and livedata
+            "lifecycle"                 : "android.arch.lifecycle:extensions:${LifecycleVer}",
+            //room
+            "room"                      : "android.arch.persistence.room:runtime:${RoomVer}",
+            "room-compiler"             : "android.arch.persistence.room:compiler:${RoomCompilerVer}",
+    ]
+}

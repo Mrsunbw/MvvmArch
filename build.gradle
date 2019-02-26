@@ -1,0 +1,31 @@
+apply from: 'config.gradle'
+
+buildscript {
+    repositories {
+        google()
+        jcenter()
+        maven { url 'https://dl.bintray.com/umsdk/release' }
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.3.1'
+        classpath 'com.antfortune.freeline:gradle:0.8.8'
+        classpath 'com.growingio.android:vds-gradle-plugin:1.1.8'
+        classpath 'com.jakewharton:butterknife-gradle-plugin:10.1.0'
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        maven { url "https://jitpack.io" }
+        maven { url 'https://dl.bintray.com/umsdk/release' }
+        maven { url "http://10.13.3.10:8081/nexus/content/repositories/releases/" }
+        maven { url "http://10.13.3.10:8081/nexus/content/repositories/snapshots/" }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
